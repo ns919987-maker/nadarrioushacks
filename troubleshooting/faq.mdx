@@ -1,10 +1,10 @@
 ---
-title: "Frequently Asked Questions — NitroType Cheat v2"
+title: "NitroType Cheat v2 Help: Frequently Asked Questions"
 sidebarTitle: "FAQ"
 description: "Answers to the most common questions about NitroType Cheat v2, including ban risk, compatibility, settings, and how the automation works."
 ---
 
-Find answers to the most common questions about NitroType Cheat v2 below. If your question isn't covered here, join the Discord server via the button in the bottom-right corner of the app, or open an issue on the GitHub repository.
+Find answers to the most common questions about NitroType Cheat v2 below. If your question isn't covered here, join the community via the **Join Discord** button in the bottom-left corner of the app, or open an issue on the GitHub repository.
 
 <AccordionGroup>
 
@@ -13,48 +13,52 @@ Find answers to the most common questions about NitroType Cheat v2 below. If you
 
     - **Lower typing speeds with realistic variance** — less likely to attract attention because the stats are closer to what a human produces.
     - **High speeds with no variance** — more suspicious, since perfectly uniform timing is not humanly possible.
-    - **God Mode** — almost certain to trigger detection. The in-app warning says as much before you enable it.
+    - **God Mode** — the app's own warning states it is *highly likely* your account will be banned if you use it.
 
     You use this tool entirely at your own risk. The developer accepts no responsibility for in-game bans, account suspensions, or any other consequences.
   </Accordion>
 
   <Accordion title="What is the maximum WPM I can reach?">
-    With standard typing settings and the delay set to its minimum value, the cheat can reach approximately **1,200 WPM**. With **God Mode** enabled — which removes all typing delay limits and forces 100% accuracy — speeds of around **4,000 WPM** are achievable, depending on your system performance and browser responsiveness.
+    With standard typing settings and the Typing Rate slider at its fastest position, the cheat can reach approximately **1,200 WPM**. With **God Mode** enabled — which removes all typing delay limits and forces 100% accuracy — speeds of around **4,000 WPM** are achievable, depending on your system performance and browser responsiveness.
+
+    <Warning>
+      Enabling God Mode makes it highly likely your account will be banned. The app displays a confirmation warning before activating it.
+    </Warning>
   </Accordion>
 
   <Accordion title="Will my settings be saved when I close the app?">
-    Yes. All slider positions (typing rate, typing rate variance, accuracy, accuracy variance) and all checkbox states (Auto Start, Auto Game, Use Nitros) are saved automatically when you close the app. The next time you launch it, everything is restored exactly as you left it.
+    Yes. All slider positions (Typing Rate, Typing Rate Variance, Accuracy, Accuracy Variance) and all checkbox states (Auto Start, Auto Game, Use Nitros) are saved automatically when you close the app. The next time you launch it, everything is restored exactly as you left it.
 
-    The only exception is if the settings file becomes corrupt — in that case, the app resets to defaults (see [Common Errors](/troubleshooting/common-errors) for details).
+    The only exception is if the settings file becomes corrupt — in that case, the app resets to defaults. See [Common Errors](/troubleshooting/common-errors) for details on what to do if that happens.
   </Accordion>
 
   <Accordion title="Does the cheat store my NitroType password?">
-    No. The cheat embeds a real browser window (powered by Microsoft WebView2) that loads `nitrotype.com` directly. You log in through the actual NitroType website — the cheat never intercepts, reads, or stores your username or password. Your credentials stay between your browser session and NitroType's servers.
+    No. The cheat embeds a real browser window that loads `nitrotype.com` directly. You log in through the actual NitroType website — the cheat never intercepts, reads, or stores your username or password. Your credentials stay between your browser session and NitroType's servers.
   </Accordion>
 
   <Accordion title="Why does the Start button stay disabled?">
     When **Auto Start** is enabled, the Start button is intentionally greyed out and disabled. In Auto Start mode, the cheat detects when a race begins and starts typing automatically — no manual trigger is needed.
 
-    If you want to use the Start button yourself, uncheck **Auto Start** in the control panel. The button will become active and you can click it once you're on the `/race` page and the race text has loaded.
+    If you want to use the Start button yourself, uncheck **Auto Start** in the control panel. The button will become active and you can click it once you're on the race page and the race text has loaded.
   </Accordion>
 
   <Accordion title="The cheat isn't typing — what do I do?">
     Work through the following checklist:
 
-    1. **Check the URL** — make sure the embedded browser is on the `/race` page (`nitrotype.com/race`), not the lobby or home page.
+    1. **Check the URL** — make sure the embedded browser is on the race page (`nitrotype.com/race`), not the lobby or home page.
     2. **Check Auto Start** — if Auto Start is off, you need to click the Start button manually after the race text appears.
     3. **Wait for race text to load** — clicking Start before the text is fully on screen triggers the "The game hasn't started yet" error and does nothing. Wait until the text is visible, then click Start.
     4. **Restart the cheat** — if nothing works, close NitroType Cheat v2 completely and reopen it, then try again.
   </Accordion>
 
   <Accordion title="Is NitroType Cheat v2 still being developed?">
-    No — the project has officially been discontinued. The original developer is no longer actively building new features or fixing bugs. However, the GitHub repository remains open: community pull requests are still reviewed and merged when they are submitted, so occasional new releases do appear. The source code is publicly available if you want to review or contribute to it.
+    No — the project has officially been discontinued. The original developer is no longer actively building new features or fixing bugs. However, the GitHub repository remains open: community pull requests are still reviewed and merged when submitted, so occasional new releases do appear. The source code is publicly available if you want to review or contribute to it.
   </Accordion>
 
   <Accordion title="Where can I get support?">
     There are two places to get help:
 
-    - **Discord** — click the Discord button in the bottom-right corner of the app to join the community server. This is the fastest way to get a response.
+    - **Discord** — click the **Join Discord** button in the bottom-left corner of the app to join the community server. This is the fastest way to get a response.
     - **GitHub Issues** — open an issue at [https://github.com/kgsensei/NitroTypeHack2](https://github.com/kgsensei/NitroTypeHack2) for bug reports or feature requests. Keep in mind that active development has stopped, so response times may vary.
   </Accordion>
 

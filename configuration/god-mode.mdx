@@ -1,5 +1,5 @@
 ---
-title: "God Mode: Maximum Speed with No Limits"
+title: "God Mode: Unlimited Typing Speed in NitroType Cheat v2"
 sidebarTitle: "God Mode"
 description: "Enable God Mode in NitroType Cheat v2 to remove all typing delays and force 100% accuracy, achieving the maximum possible WPM in every race."
 ---
@@ -14,8 +14,8 @@ God Mode is a special toggle that removes every constraint on the cheat's typing
 
 God Mode changes two core behaviors in the typing engine:
 
-- **Overrides Typing Rate.** Instead of waiting the number of milliseconds set by your Typing Rate slider, the cheat uses `Task.Delay(0)` — a zero-duration wait that yields control back to the async runtime for exactly one tick and then immediately continues. In practice this means keystrokes are dispatched as rapidly as the browser's DevTools Protocol input pipeline will accept them.
-- **Forces Accuracy to 100%.** No intentional mistype errors are inserted, regardless of what the Accuracy slider is set to. Your Accuracy slider value is not changed — it is simply ignored while God Mode is active.
+- **Overrides Typing Rate.** Instead of waiting the number of milliseconds set by your Typing Rate slider, the cheat dispatches each keystroke as rapidly as the browser's input pipeline will accept them — effectively no delay between characters. In practice, keystrokes are sent as fast as your system and browser can process them.
+- **Forces Accuracy to 100% for the race.** No intentional mistype errors are inserted during the race, regardless of what the Accuracy slider is set to. Your Accuracy slider value itself is not changed — it is simply ignored while God Mode is active, and your setting is restored the moment you turn God Mode off.
 
 Under optimal conditions — fast hardware and a responsive browser — God Mode can reach speeds approaching **~4,000 WPM**, though actual throughput varies depending on your system performance and browser processing latency.
 
@@ -33,5 +33,5 @@ Under optimal conditions — fast hardware and a responsive browser — God Mode
 To disable God Mode, simply uncheck the **God Mode** checkbox. No confirmation dialog is shown when turning it off — it deactivates immediately.
 
 <Note>
-  God Mode overrides both the Typing Rate and Accuracy sliders while it is active, but it does **not** change your slider values. As soon as you uncheck God Mode, the cheat resumes using whatever Typing Rate and Accuracy you had configured.
+  God Mode overrides both the Typing Rate and Accuracy sliders **for the duration of each race** while it is active, but it does **not** change your slider values. As soon as you uncheck God Mode, the cheat resumes using whatever Typing Rate and Accuracy you had configured.
 </Note>

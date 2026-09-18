@@ -1,5 +1,5 @@
 ---
-title: "Configure Accuracy Settings in NitroType Cheat v2"
+title: "Accuracy and Error Rate Settings in NitroType Cheat v2"
 sidebarTitle: "Accuracy"
 description: "Control how often NitroType Cheat v2 makes intentional mistakes during races to simulate realistic human typing accuracy and avoid detection."
 ---
@@ -16,7 +16,7 @@ When you set accuracy below 100%, the cheat calculates exactly how many errors t
 letters_to_miss = floor(race_text_length × (100 − accuracy) / 100)
 ```
 
-Those errors are distributed evenly across the race text so that mistakes are spread throughout the race rather than clustered at the start or end.
+Those errors are distributed **evenly** across the race text so that mistakes are spread throughout the race at regular intervals rather than clustered at the start or end.
 
 Each intentional error uses a random character from the set `` ` ~ @ # $ % ^ & * ( ) `` — characters that never appear in NitroType race text. This means the cheat immediately knows to correct them, so every error is followed by an instant backspace-and-retype without any extra delay or configuration on your part.
 
@@ -33,7 +33,7 @@ The Accuracy Variance slider works the same way as Typing Rate Variance: it adds
 For example, with **Accuracy: 95** and **Accuracy Variance: 3**, each race runs at a randomly chosen accuracy between **92% and 98%**. This makes your error rate vary slightly from race to race, which is more consistent with how a real person's typing accuracy fluctuates.
 
 <Note>
-  If **God Mode** is active, accuracy is always forced to **100%** regardless of what the Accuracy slider is set to. Your slider value is preserved and will resume as soon as you disable God Mode.
+  If **God Mode** is active, accuracy is always forced to **100%** for that race regardless of what the Accuracy slider is set to. Your slider value is preserved and will resume as soon as you disable God Mode.
 </Note>
 
 ## Saving Your Settings

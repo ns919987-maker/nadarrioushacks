@@ -1,5 +1,5 @@
 ---
-title: "Automation Options: Auto Start and Auto Game"
+title: "Automation Options in NitroType Cheat v2 Explained"
 sidebarTitle: "Automation"
 description: "Configure Auto Start and Auto Game in NitroType Cheat v2 to automatically begin typing and queue new races without any manual input."
 ---
@@ -10,19 +10,22 @@ NitroType Cheat v2 includes two automation options — **Auto Start** and **Auto
 
 When Auto Start is enabled (the default), you never need to click a Start button. The cheat injects a script directly into the race iframe that polls every **10 ms** for the race text. As soon as the race text appears and the race is live, the script posts it to the cheat and typing begins automatically.
 
-The injected script also monitors the page for a **"Communications Error"** heading. If that error appears — which NitroType occasionally shows when a connection drops — the script automatically reloads the page so you can rejoin without any manual intervention.
+The injected script also runs a continuous background monitor that handles two recovery scenarios:
+
+- **Communications Error** — If NitroType displays a "Communications Error" heading (which can appear when a connection drops), the script automatically reloads the page so you can rejoin without any manual intervention.
+- **Post-race prompt** — After a race ends, NitroType briefly shows a "Validated! Play on." prompt. The script detects this and automatically reloads the page so the cheat does not get stuck between races.
 
 Because Auto Start handles race detection on its own, the manual **Start** button in the app is **disabled** while this option is on. If you turn Auto Start off, the Start button becomes active again and you must click it yourself once you are in a race and the race text is visible on screen.
 
 <Tip>
-  Auto Start is recommended for any hands-free session. It is faster and more reliable than clicking manually, and it recovers from Communications Errors without your input.
+  Auto Start is recommended for any hands-free session. It is faster and more reliable than clicking manually, and it recovers from connection errors and post-race screens without your input.
 </Tip>
 
 ## Auto Game
 
 When Auto Game is enabled (default: off), the cheat automatically queues you into a new race after each race finishes. After your last keystroke is sent, the cheat waits a random delay between **4,250 ms and 4,500 ms**, then sends an Enter keypress to confirm joining the next race.
 
-The random wait window — rather than a fixed delay — is intentional. A perfectly consistent pause between every single race would be an obvious automated pattern. The 250 ms of randomness makes the inter-race timing look more like a human deciding to hit Enter.
+The random wait window — rather than a fixed delay — is intentional. A perfectly consistent pause between every single race would be an obvious automated pattern. The ~250 ms of randomness makes the inter-race timing look more like a human deciding to hit Enter.
 
 <Note>
   Auto Game requires you to already be in a race lobby or on the NitroType race page when a race ends. It sends an Enter keypress to re-queue, but it does not navigate to NitroType.com or find a race room for you.

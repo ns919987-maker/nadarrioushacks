@@ -1,20 +1,18 @@
 ---
-title: "Automatic Update Checks in NitroType Cheat v2"
+title: "NitroType Cheat v2 Automatic Update Check and Upgrade Guide"
 sidebarTitle: "Updates"
-description: "NitroType Cheat v2 checks for new versions automatically at startup. Learn how to update to the latest release and what to do if the update check fails."
+description: "NitroType Cheat v2 checks for new versions automatically at every startup. Learn how to update and what to do if the update check fails."
 ---
 
 Every time you launch NitroType Cheat v2, the app silently contacts the update server to confirm you are running the latest release. This ensures you always have access to the most recent bug fixes and community-contributed improvements without needing to check manually.
 
 ## How Update Checks Work
 
-On startup, the app sends a request to the update server with its current version code (`4.6.3`) in the `User-Agent` header. The server responds with the live version code, and the two are compared:
+On startup, the app sends a request to the update server and compares the live version against the version you have installed (`4.6.3`):
 
 - **If the versions match** — no prompt is shown and the app opens normally.
 - **If a newer version is available** — a dialog prompts you with a link to download the new installer.
 - **If the update server is unreachable** — either because your internet connection is down or the server is temporarily offline — an error dialog is displayed to let you know the check could not complete. The app continues to run normally regardless; the update check failure does not block any features.
-
-The check is performed with cache-control headers set to `no-cache`, so you always receive the latest server response rather than a cached one.
 
 ## How to Update
 

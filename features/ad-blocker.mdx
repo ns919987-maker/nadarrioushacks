@@ -1,10 +1,10 @@
 ---
-title: "Built-in Ad Blocker in NitroType Cheat v2"
+title: "NitroType Cheat v2 Built-in Ad Blocker and CAPTCHA Solver"
 sidebarTitle: "Ad Blocker"
-description: "NitroType Cheat v2 includes a two-layer ad blocker and automatic CAPTCHA solver that removes ads and handles challenges inside the embedded browser."
+description: "NitroType Cheat v2 includes a two-layer ad blocker and an automatic CAPTCHA solver that remove ads and handle challenges inside the embedded browser."
 ---
 
-NitroType Cheat v2 ships with a built-in ad blocker that keeps the embedded browser clean and distraction-free while you race. Because the cheat runs NitroType inside its own WebView2-based window, it has full control over every request and every DOM element the page creates — meaning ads never get a chance to render, and upgrade prompts are silently swept away before you ever see them.
+NitroType Cheat v2 ships with a built-in ad blocker that keeps the embedded browser clean and distraction-free while you race. Because the cheat runs NitroType inside its own browser window, it has full control over every network request and every DOM element the page creates — meaning ads never get a chance to render, and upgrade prompts are silently swept away before you ever see them.
 
 ## How It Works
 
@@ -12,12 +12,19 @@ The ad blocker operates on two independent layers that run simultaneously whenev
 
 ### Layer 1 — Network-Level Blocking
 
-Every outbound request made by the embedded browser is checked against a built-in blocklist of known ad and tracking domains before it leaves your machine. Blocked domains include (among others):
+Every outbound request made by the embedded browser is checked against a built-in blocklist of known ad and tracking domains before it leaves your machine. Blocked domains include:
 
-- `doubleclick.net`
-- `googletagmanager.com`
-- `facebook.com` / `facebook.net`
+- `adsafeprotected.com`
+- `btloader.com`
+- `bugsnag.com`
+- `cloudfront.net`
 - `cloudflareinsights.com`
+- `cuddlycake.com`
+- `doubleclick.net`
+- `facebook.com` / `facebook.net`
+- `googletagmanager.com`
+- `intergient.com`
+- `proper.io`
 - `pub.network`
 - `qualaroo.com`
 - `vuukle.com`
@@ -40,7 +47,7 @@ Because this script loops continuously, even dynamically injected ad elements ar
 
 Alongside the two-layer ad blocker, an automatic hCaptcha solver extension is bundled directly with the cheat. When NitroType presents a CAPTCHA challenge — for example, after repeated logins or suspicious activity — the extension detects it and solves it automatically. You do not need to click anything or interact with the CAPTCHA at all.
 
-The extension is loaded from the `extensions/hlifkpholllijblknnmbfagnkjneagid` folder inside the cheat's installation directory and is injected into the WebView2 browser profile at startup.
+The extension is loaded from the `extensions/hlifkpholllijblknnmbfagnkjneagid` folder inside the cheat's installation directory and is injected into the browser profile at startup.
 
 <Note>
   The CAPTCHA solver is a third-party extension developed and maintained independently of NitroType Cheat v2. Its data handling practices are governed by its own privacy policy, available at [https://www.minirpa.net/captchasolver_privacy.html](https://www.minirpa.net/captchasolver_privacy.html). You can also find the extension on the [Chrome Web Store](https://chromewebstore.google.com/detail/captcha-solver-auto-hcapt/hlifkpholllijblknnmbfagnkjneagid).
