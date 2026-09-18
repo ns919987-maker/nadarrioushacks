@@ -1,0 +1,37 @@
+---
+title: "God Mode: Maximum Speed with No Limits"
+sidebarTitle: "God Mode"
+description: "Enable God Mode in NitroType Cheat v2 to remove all typing delays and force 100% accuracy, achieving the maximum possible WPM in every race."
+---
+
+God Mode is a special toggle that removes every constraint on the cheat's typing engine. Instead of waiting between keystrokes, it fires them as fast as the browser can process input — while simultaneously locking accuracy to a perfect 100%. The result is the absolute maximum WPM your system and browser can sustain, with zero errors.
+
+<Warning>
+  God Mode makes your performance **extremely obvious** to NitroType's anti-cheat systems. Finishing races at thousands of WPM with perfect accuracy is far outside any human range and is very likely to trigger an account ban. Enable it only on accounts you are willing to lose, and use it at your own risk.
+</Warning>
+
+## What God Mode Does
+
+God Mode changes two core behaviors in the typing engine:
+
+- **Overrides Typing Rate.** Instead of waiting the number of milliseconds set by your Typing Rate slider, the cheat uses `Task.Delay(0)` — a zero-duration wait that yields control back to the async runtime for exactly one tick and then immediately continues. In practice this means keystrokes are dispatched as rapidly as the browser's DevTools Protocol input pipeline will accept them.
+- **Forces Accuracy to 100%.** No intentional mistype errors are inserted, regardless of what the Accuracy slider is set to. Your Accuracy slider value is not changed — it is simply ignored while God Mode is active.
+
+Under optimal conditions — fast hardware and a responsive browser — God Mode can reach speeds approaching **~4,000 WPM**, though actual throughput varies depending on your system performance and browser processing latency.
+
+## How to Enable God Mode
+
+<Steps>
+  <Step title="Check the God Mode checkbox">
+    In the NitroType Cheat v2 app, locate the **God Mode** checkbox and click it. A confirmation dialog will appear warning you that God Mode removes all typing limits and that your account is highly likely to be banned.
+  </Step>
+  <Step title="Confirm in the dialog">
+    Click **Yes** in the warning dialog to confirm. God Mode is now active. If you click **No**, the checkbox returns to unchecked and nothing changes.
+  </Step>
+</Steps>
+
+To disable God Mode, simply uncheck the **God Mode** checkbox. No confirmation dialog is shown when turning it off — it deactivates immediately.
+
+<Note>
+  God Mode overrides both the Typing Rate and Accuracy sliders while it is active, but it does **not** change your slider values. As soon as you uncheck God Mode, the cheat resumes using whatever Typing Rate and Accuracy you had configured.
+</Note>

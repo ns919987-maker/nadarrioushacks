@@ -1,0 +1,46 @@
+---
+title: "NitroType Cheat v2: What It Is and How It Works"
+sidebarTitle: "Introduction"
+description: "NitroType Cheat v2 is a free, open-source Windows app that automates typing in NitroType races, reaching up to 4,000 WPM with configurable accuracy."
+---
+
+NitroType Cheat v2 is a free, source-available Windows desktop application that automates typing in [NitroType](https://nitrotype.com) races. Instead of relying on browser extensions or external scripts, it opens NitroType inside an embedded browser window and simulates keyboard input directly — letting you reach speeds that no human typist could match. Whether you want to experiment with how the game handles automated input or simply explore how a typing-game cheat is built, NitroType Cheat v2 gives you full control over speed, accuracy, and automation behavior.
+
+## What Is NitroType Cheat v2?
+
+NitroType Cheat v2 is a .NET WinForms application powered by the Microsoft WebView2 Runtime. When you launch it, it opens NitroType.com inside an embedded browser window — no separate tab or external browser required. During a race, the app reads the race text from the page and dispatches simulated keystroke events directly to the embedded browser using the Chrome DevTools Protocol, as if a real keyboard were being used.
+
+Because it operates entirely within its own embedded browser, NitroType Cheat v2 never asks for your NitroType username, password, or any account credentials. You log in to NitroType yourself inside the embedded browser, and your session remains under your control at all times.
+
+## Key Capabilities
+
+<CardGroup cols={2}>
+  <Card title="Typing Speed" icon="gauge-high">
+    Configure your typing rate with a slider and reach up to approximately **4,000 WPM** at near-perfect accuracy. A variance setting adds natural randomness to your timing between keystrokes.
+  </Card>
+  <Card title="Accuracy Control" icon="crosshairs">
+    Set a target accuracy percentage and an accuracy variance. The cheat deliberately introduces incorrect characters at calculated intervals to simulate human-like mistakes — or crank accuracy to 100% for flawless runs.
+  </Card>
+  <Card title="Automation" icon="robot">
+    **Auto Start** detects the start of a race and begins typing automatically without any input from you. **Auto Game** queues you into the next race after a short delay once a race finishes, so you can leave the app running unattended.
+  </Card>
+  <Card title="Built-in Ad Blocker" icon="shield-halved">
+    A network-level ad blocker filters outbound requests against a block list and removes ad-related HTML elements from the NitroType page in real time, keeping the embedded browser clean and fast.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Using NitroType Cheat v2 violates NitroType's Terms of Service and may result in a permanent ban of your account, particularly if you enable **God Mode**. The developer does not condone cheating and takes no responsibility for any in-game penalties, account suspensions, or other consequences that result from your use of this tool. You are solely responsible for all outcomes.
+</Warning>
+
+## System Requirements
+
+To run NitroType Cheat v2, your machine must meet the following requirements:
+
+- **Windows** operating system (the app is a .NET WinForms desktop application and does not run on macOS or Linux)
+- **Microsoft WebView2 Runtime** installed — this is the embedded browser engine the app depends on; many Windows machines already have it, but if yours does not, you will be prompted to install it
+- A **NitroType account** to log in to inside the embedded browser
+
+<Note>
+  NitroType Cheat v2 is source-available on GitHub. You can read, inspect, and contribute to the code at [github.com/kgsensei/NitroTypeHack2](https://github.com/kgsensei/NitroTypeHack2). The project is no longer actively developed by its author, but pull requests are still reviewed and merged.
+</Note>

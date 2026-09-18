@@ -1,0 +1,48 @@
+---
+title: "Install NitroType Cheat v2 on Windows"
+sidebarTitle: "Installation"
+description: "Download and install NitroType Cheat v2 on Windows. Includes WebView2 Runtime setup and step-by-step installer walkthrough."
+---
+
+This page walks you through downloading and installing NitroType Cheat v2 on Windows from start to finish. The whole process takes just a few minutes and requires no developer tools or manual configuration — the installer handles everything automatically.
+
+## Prerequisites
+
+Before you begin, make sure you have the following:
+
+<Card title="What you need before installing" icon="list-check">
+  - A **Windows PC** (NitroType Cheat v2 is a native Windows desktop app and does not run on macOS or Linux)
+  - **Microsoft WebView2 Runtime** — the embedded browser engine the app relies on. It comes pre-installed on most modern Windows machines. If yours does not have it, you can download it from [Microsoft's WebView2 page](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+</Card>
+
+## Installation Steps
+
+<Steps>
+  <Step title="Go to the latest release on GitHub">
+    Open your browser and navigate to [https://github.com/kgsensei/NitroTypeHack2/releases/latest](https://github.com/kgsensei/NitroTypeHack2/releases/latest). This link always points to the most recent version of NitroType Cheat v2.
+  </Step>
+  <Step title="Download the installer">
+    On the releases page, find the **Assets** section and click `nitroTypeInstaller.exe` to download it to your computer.
+  </Step>
+  <Step title="Run the installer">
+    Open the downloaded `nitroTypeInstaller.exe` file and follow the on-screen setup wizard. Accept the prompts and let the installer complete — it will place the NitroType Cheat application on your machine and create a shortcut you can use to launch it.
+
+    <Warning>
+      Windows may display a SmartScreen warning saying the app is from an unknown publisher. This happens because the installer is not code-signed. To proceed, click **"More info"** and then **"Run anyway"**. The source code is publicly available on GitHub if you want to verify what the installer contains.
+    </Warning>
+  </Step>
+  <Step title="Install WebView2 Runtime if prompted">
+    When you first launch NitroType Cheat, the app checks whether the Microsoft WebView2 Runtime is installed. If it is missing, you will see a dialog that reads:
+
+    > *"You don't have the Microsoft WebView2 Component installed. This is a requirement to run the cheat. Please install it then run the cheat again."*
+
+    If this happens, install the WebView2 Runtime from [https://developer.microsoft.com/en-us/microsoft-edge/webview2/](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) and then relaunch the cheat.
+
+    <Note>
+      Most Windows 10 and Windows 11 machines already have the WebView2 Runtime installed as part of the Microsoft Edge browser. If you see this error, it likely means Edge has never been updated on your system or was fully removed.
+    </Note>
+  </Step>
+  <Step title="Launch NitroType Cheat">
+    Once the installer finishes (and WebView2 is confirmed to be present), open NitroType Cheat from your desktop shortcut or Start Menu. The app will launch and automatically load NitroType.com inside the embedded browser window.
+  </Step>
+</Steps>

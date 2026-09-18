@@ -1,0 +1,52 @@
+---
+title: "Configure Typing Speed in NitroType Cheat v2"
+sidebarTitle: "Typing Speed"
+description: "Set your target WPM and typing rate variance in NitroType Cheat v2 to control how fast and how naturally the cheat types during races."
+---
+
+The Typing Rate slider is the primary control for how fast NitroType Cheat v2 types during a race. Specifically, it sets the delay in milliseconds between each simulated keystroke — a shorter delay means faster typing, and a longer delay means slower, more deliberate typing. Adjusting this slider is the main way you tune the cheat's words-per-minute output.
+
+## Typing Rate
+
+The slider controls the millisecond delay inserted between every keystroke the cheat sends to the browser. Because the slider is **inverted**, dragging it to the right (higher slider value) decreases the delay, which increases your WPM. Dragging it to the left increases the delay and slows you down.
+
+The relationship between delay and WPM follows this formula:
+
+```
+WPM ≈ 60 / (delay_ms / 1000) / 5
+```
+
+At the default setting of **100 ms**, you type at roughly **120 WPM**. At the minimum delay of **10 ms**, the cheat can reach roughly **1,200 WPM**.
+
+In addition to the delay you set, the cheat automatically applies a **sin-wave jitter of ±10 ms** to each individual keystroke. This micro-variation is always active and gives your timing a more organic, human-like rhythm without you needing to configure anything extra.
+
+<Tip>
+  Start with a delay that puts you around **80–150 WPM** for the most natural-looking result. Sudden jumps to very high speeds are more likely to attract attention.
+</Tip>
+
+### WPM Reference Table
+
+Use this table to find a delay that matches your target speed:
+
+| Delay (ms) | Approx. WPM |
+|------------|-------------|
+| 10         | ~1,200      |
+| 50         | ~240        |
+| 100        | ~120        |
+| 200        | ~60         |
+
+## Typing Rate Variance
+
+The Typing Rate Variance slider adds a random offset to your base typing rate at the start of each race. Instead of every race running at exactly the same speed, the effective rate for a given race is your base rate plus or minus a random value drawn from the range `[-variance, +variance]`.
+
+For example, if your Typing Rate is **100 ms** and your variance is **20**, each race will run at anywhere from **80 ms to 120 ms** — roughly 100–150 WPM — chosen randomly before typing begins. The variance value is fixed for the entire race; it is not re-rolled per keystroke.
+
+This setting is useful when you want your performance to vary naturally between races rather than finishing at a suspiciously identical speed every time. The minimum effective rate is capped at **10 ms** regardless of how low the variance pushes it.
+
+<Tip>
+  A variance of **10–20** is a good starting point. It produces noticeable race-to-race variation without the risk of variance pushing you into an unrealistically fast range.
+</Tip>
+
+## Saving Your Settings
+
+All slider values are saved automatically when you close the app. The next time you launch NitroType Cheat v2, your Typing Rate and Typing Rate Variance will be restored to exactly where you left them.

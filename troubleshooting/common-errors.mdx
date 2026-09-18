@@ -1,0 +1,98 @@
+---
+title: "Fix Common Errors in NitroType Cheat v2"
+sidebarTitle: "Common Errors"
+description: "Diagnose and resolve the most common error messages in NitroType Cheat v2, including WebView2 errors, DLL issues, and race detection failures."
+---
+
+NitroType Cheat v2 surfaces clear error messages when something goes wrong, but knowing what each one means and how to resolve it isn't always obvious. This page covers every common error you may encounter, its cause, and the exact steps to fix it.
+
+<AccordionGroup>
+
+  <Accordion title="WebView2 Component Not Installed">
+    **Error message:** `You don't have the Microsoft WebView2 Component installed.`
+
+    **Cause:** The Microsoft WebView2 Runtime is not installed on your machine. NitroType Cheat v2 uses WebView2 to embed the browser window, so it cannot start without it.
+
+    **Fix:**
+    1. Visit [https://developer.microsoft.com/en-us/microsoft-edge/webview2/](https://developer.microsoft.com/en-us/microsoft-edge/webview2/).
+    2. Download and run the WebView2 Runtime installer.
+    3. Once the installation finishes, relaunch NitroType Cheat v2.
+
+    This error is fatal — the app will close automatically after you dismiss it. You must install WebView2 before the cheat can open.
+  </Accordion>
+
+  <Accordion title="Unable to Load WebViewLoader2.dll">
+    **Error message:** `Unable to load DLL WebViewLoader2.dll or one of its dependencies.`
+
+    **Cause:** Another application on your machine is already using the WebView2 component, or you have two instances of NitroType Cheat v2 running at the same time. This causes a conflict when loading the required DLL.
+
+    **Fix:**
+    1. Check your taskbar and system tray for any other running instances of the cheat and close them.
+    2. Close any other applications that embed a WebView2 browser (for example, some Electron-based apps or Microsoft Store apps).
+    3. Relaunch NitroType Cheat v2.
+
+    Like the missing WebView2 error, this is a fatal startup error and the app will exit immediately after the dialog is dismissed.
+  </Accordion>
+
+  <Accordion title="The Game Hasn't Started Yet">
+    **Error message:** `The game hasn't started yet.`
+
+    **Cause:** You clicked the **Start** button before the race text had fully loaded into the embedded browser. The cheat looks for the race text in the page's `.dash-copy` element — if the race hasn't loaded that content yet, it reports this error.
+
+    **Fix:**
+    1. Wait for the race countdown to finish and for the full race text to appear in the browser.
+    2. Click **Start** only once the race is visibly in progress and the text is on screen.
+
+    This is not a fatal error — dismiss the dialog and try again once the text has loaded.
+  </Accordion>
+
+  <Accordion title="Enter a Race Before Starting">
+    **Error message:** `Enter A race before starting the cheat.`
+
+    **Cause:** You clicked **Start** while the embedded browser was not on the `/race` page. The cheat checks the current URL before injecting its script, and if you're on the lobby, the home page, or any other URL, it shows this warning instead of running.
+
+    **Fix:**
+    1. Inside the embedded browser, navigate to a race (the URL must be `nitrotype.com/race`).
+    2. Once you're on the race page with the race loaded, click **Start**.
+  </Accordion>
+
+  <Accordion title="Unable to Connect to Update Server">
+    **Error message:** `Unable to connect to update server.`
+
+    **Cause:** The update check at startup could not reach the remote server. This can happen because your internet connection is down, a firewall is blocking the request, or the update server is temporarily offline.
+
+    **Fix:**
+    1. Check that your internet connection is working.
+    2. If your connection is fine, the update server may simply be down — dismiss the dialog and continue using the cheat as normal.
+
+    This error is **not fatal**. The app continues to run with full functionality even when the update check fails.
+  </Accordion>
+
+  <Accordion title="Could Not Load Configuration Files">
+    **Error message:** `Could not load configuration files.`
+
+    **Cause:** The settings file saved from your last session is corrupt, missing, or in an unexpected format. This can happen after an abnormal shutdown or a failed update.
+
+    **Fix:** The app automatically detects the problem and resets all settings to their defaults. You do not need to do anything to recover — just reconfigure your preferred options when the app opens:
+
+    - Typing speed and typing rate variance
+    - Accuracy and accuracy variance
+    - Auto Start, Auto Game, and Use Nitros checkboxes
+
+    Your settings will be saved correctly going forward once the corrupt file has been replaced.
+  </Accordion>
+
+  <Accordion title="Failed to Remove WebviewIFrame ID from List">
+    **Error message:** `Failed to remove WebviewIFrame ID from list.`
+
+    **Cause:** An internal race condition occurred while navigating between pages in the embedded browser. When a page frame is destroyed, the cheat tries to remove it from its tracking list — if two frames are destroyed simultaneously, this lookup can fail.
+
+    **Fix:**
+    1. Dismiss the error dialog.
+    2. Close and reopen NitroType Cheat v2.
+    3. If the error appears every time you navigate, try restarting your PC and relaunching the cheat.
+
+    This error does not necessarily prevent the cheat from working in the current session, but restarting is the safest course of action.
+  </Accordion>
+
+</AccordionGroup>

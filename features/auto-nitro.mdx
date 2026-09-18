@@ -1,0 +1,37 @@
+---
+title: "Auto Nitro: Automatic Nitro Boost Usage"
+sidebarTitle: "Auto Nitro"
+description: "Enable Auto Nitro in NitroType Cheat v2 to automatically use a nitro boost on the longest word in every race for maximum speed gains."
+---
+
+Auto Nitro is an optional feature that automatically fires a nitro boost at the optimal moment during a race. Instead of manually activating a nitro at the right time, the cheat handles the entire process for you — identifying the best target word and sending the boost trigger precisely when it types that word.
+
+## How It Works
+
+NitroType activates a nitro boost when the Enter key is pressed at the right moment during a race. NitroType Cheat v2 takes advantage of this by weaving an Enter key event into its typing sequence at a carefully chosen point.
+
+When Auto Nitro is enabled and a race begins, the cheat performs the following steps:
+
+1. **Scans the race text** for the longest word. The longest word is the highest-value target because it covers the most characters and gives the nitro boost the greatest net advantage.
+2. **Replaces that word** in its internal typing plan with a special placeholder character (`ʜ`). The rest of the race text is typed normally, character by character.
+3. **When the placeholder is reached**, instead of typing the word letter-by-letter, the cheat dispatches a `rawKeyDown` event followed by a `keyUp` event for keycode `13` (the Enter key). NitroType interprets this as a nitro activation and fires the boost immediately.
+
+The result is a seamless race where the nitro fires at exactly the right word without any manual input from you.
+
+## Enabling Auto Nitro
+
+Auto Nitro is off by default. To enable it:
+
+1. Open NitroType Cheat v2.
+2. Check the **Use Nitros** checkbox in the control panel.
+3. Start a race as normal — Auto Nitro will fire automatically during the race.
+
+You can uncheck **Use Nitros** at any time between races to disable the feature.
+
+<Note>
+  Auto Nitro is fully compatible with all typing speed and accuracy settings, including custom variance values. It is automatically inactive when **God Mode** is enabled — God Mode bypasses the normal typing simulation entirely and does not interact with the nitro system.
+</Note>
+
+<Tip>
+  For the best advantage, use Auto Nitro on races where the longest word appears near the start of the text. The earlier the nitro fires, the more of the remaining race it covers. Races with a single notably long word (seven or more characters longer than the average word) produce the most noticeable speed gain.
+</Tip>

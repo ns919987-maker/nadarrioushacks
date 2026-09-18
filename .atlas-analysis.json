@@ -1,0 +1,69 @@
+{
+  "projectType": "frontend",
+  "projectName": "NitroType Cheat v2",
+  "projectDescription": "A Windows desktop application that automates typing in the NitroType racing game, featuring configurable typing speed, accuracy simulation, auto-start, and an integrated ad blocker.",
+  "theme": "almond",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "installation",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Configuration",
+        "pages": [
+          "configuration/typing-speed",
+          "configuration/accuracy",
+          "configuration/automation",
+          "configuration/god-mode"
+        ]
+      },
+      {
+        "group": "Features",
+        "pages": [
+          "features/ad-blocker",
+          "features/auto-nitro",
+          "features/updates"
+        ]
+      },
+      {
+        "group": "Troubleshooting",
+        "pages": [
+          "troubleshooting/common-errors",
+          "troubleshooting/faq"
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Automated typing simulation up to ~4,000 WPM",
+    "Configurable typing rate with variance for natural-looking output",
+    "Adjustable accuracy percentage with variance control",
+    "Auto Start mode — begins typing as soon as a race loads",
+    "Auto New Game — automatically joins the next race after finishing",
+    "Auto Nitro Usage — uses nitros on the longest word in a race",
+    "God Mode — removes all typing limits and maximizes accuracy",
+    "Built-in ad blocker for a cleaner NitroType experience",
+    "Persistent settings saved between sessions",
+    "Automatic update checker"
+  ],
+  "publicApiSurface": [
+    "Typing Rate slider (controls WPM)",
+    "Typing Rate Variance slider",
+    "Accuracy slider (0–100%)",
+    "Accuracy Variance slider",
+    "Auto Start checkbox",
+    "Auto Game checkbox",
+    "Use Nitros checkbox",
+    "God Mode checkbox",
+    "Manual Start button",
+    "Discord support link"
+  ]
+}
